@@ -38,6 +38,7 @@ comidaSerpiente = random.choice(colores)
 if comidaSerpiente == serpienteCuerpo:
     comidaSerpiente = random.choice(colores)
 
+
 #Cambia los valores del vector
 
 def change(x, y):
