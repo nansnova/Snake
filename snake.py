@@ -26,19 +26,30 @@ import random
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-colores = ['yellow','black','blue','magneta','orange']
+
+#Establecer la lista de colores y las variables a cambiar.
+
+colores = ['yellow','black','blue','purple','orange']
 serpienteCuerpo = random.choice(colores)
 comidaSerpiente = random.choice(colores)
 
+#Establecer condicional para que no lleguen a ser iguales los colores
+
+if comidaSerpiente == serpienteCuerpo:
+    comidaSerpiente = random.choice(colores)
+
 #Cambia los valores del vector
+
 def change(x, y):
     "Change snake direction."
     aim.x = x
     aim.y = y
+
 #determina si se queda dentro del límite
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
+
 #funcion principal de movimiento
 def move():
     "Move snake forward one segment."
@@ -61,10 +72,12 @@ def move():
 
     clear()
 
+# Colocar la nueva lista de colores
+
     for body in snake:
         square(body.x, body.y, 9, serpienteCuerpo)
 
-    square(food.x, food.y, 9, 'comidaSerpiente')
+    square(food.x, food.y, 9, comidaSerpiente)
     update()
     ontimer(move, 100)
 
@@ -74,11 +87,14 @@ def movesquare():
     ontimer(movesquare, 4500)
 
 #anima snake
+
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
 listen()
-#
+
+#Controles
+
 onkey(lambda: change(10, 0), 'Right')
 onkey(lambda: change(-10, 0), 'Left')
 onkey(lambda: change(0, 10), 'Up')
