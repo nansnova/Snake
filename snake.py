@@ -20,6 +20,9 @@ Exercises
 from turtle import *
 from random import randrange
 from freegames import square, vector
+
+#Importamos directamente random para la selección aleatoria
+
 import random
 
 
