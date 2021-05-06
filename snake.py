@@ -26,7 +26,7 @@ import random
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-colores = ['yellow','orange','purple','green','blue', 'white', 'black',	'magenta']
+colores = ['yellow','black','blue','magneta','orange']
 serpienteCuerpo = random.choice(colores)
 comidaSerpiente = random.choice(colores)
 
@@ -64,7 +64,7 @@ def move():
     for body in snake:
         square(body.x, body.y, 9, serpienteCuerpo)
 
-    square(food.x, food.y, 9, 'comidaSerpiente)
+    square(food.x, food.y, 9, 'comidaSerpiente')
     update()
     ontimer(move, 100)
 
