@@ -1,3 +1,10 @@
+#Trabajo de Semana TEC
+
+#Código modificado por:
+
+#Autor: Ricardo Rmz. Condado
+#Autor: Nancy L. Garcia Jimenez
+
 """Snake, classic arcade game.
 
 Exercises
