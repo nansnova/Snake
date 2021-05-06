@@ -19,9 +19,17 @@ import random
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-colores = ['yellow','black','blue','magneta','orange']
+
+#Establecer la lista de colores y las variables a cambiar.
+
+colores = ['yellow','black','blue','purple','orange']
 serpienteCuerpo = random.choice(colores)
 comidaSerpiente = random.choice(colores)
+
+#Establecer condicional para que no lleguen a ser iguales los colores
+
+if comidaSerpiente == serpienteCuerpo:
+    comidaSerpiente = random.choice(colores)
 
 def change(x, y):
     "Change snake direction."
@@ -53,10 +61,12 @@ def move():
 
     clear()
 
+# Colocar la nueva lista de colores
+
     for body in snake:
         square(body.x, body.y, 9, serpienteCuerpo)
 
-    square(food.x, food.y, 9, 'comidaSerpiente')
+    square(food.x, food.y, 9, comidaSerpiente)
     update()
     ontimer(move, 100)
 
