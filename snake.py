@@ -16,13 +16,19 @@ Exercises
 
 """
 
+
 from turtle import *
 from random import randrange
 from freegames import square, vector
+import random
+
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+colores = ['yellow','orange','purple','green','blue', 'white', 'black',	'magenta']
+serpienteCuerpo = random.choice(colores)
+comidaSerpiente = random.choice(colores)
 
 #Cambia los valores del vector
 def change(x, y):
