@@ -16,7 +16,6 @@ Exercises
 
 """
 
-
 from turtle import *
 from random import randrange
 from freegames import square, vector
@@ -32,7 +31,11 @@ aim = vector(0, -10)
 
 #Establecer la lista de colores y las variables a cambiar.
 
-colores = ['yellow','black','blue','purple','orange']
+colores = [
+     'yellow', 'black', 'blue',
+     'purple', 'orange'
+      ]
+
 serpienteCuerpo = random.choice(colores)
 comidaSerpiente = random.choice(colores)
 
@@ -41,7 +44,6 @@ comidaSerpiente = random.choice(colores)
 if comidaSerpiente == serpienteCuerpo:
     comidaSerpiente = random.choice(colores)
 
-
 #Cambia los valores del vector
 
 def change(x, y):
@@ -49,12 +51,14 @@ def change(x, y):
     aim.x = x
     aim.y = y
 
-#determina si se queda dentro del límite
+#Determina si se queda dentro del límite
+
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
 
-#funcion principal de movimiento
+#Funcion principal de movimiento
+
 def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
