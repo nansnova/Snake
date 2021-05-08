@@ -3,7 +3,7 @@ Juego de la víbora, utilizando las librerías turtle y freegames
 
 Este código mostraba el típico juego de una serpiente que cada vez que come, aumentaba de tamaño. La practica solicitaba que de una lista de cinco colores, se eligieran de manera aleatoria y se colocaran en el cuerpo de la serpiente y la comida, también se solicitaba que la comida cambiara de posición en algún momento.
 
-# Análiis
+# Análisis
 
 * Se revisó el comportamiento del programa y como es que diferentes funciones actuaban entre sí.
 * Se localizó el área donde los colores se establecían al inicio del juego.
