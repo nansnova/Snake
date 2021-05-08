@@ -36,3 +36,30 @@ Este código mostraba el típico juego de una serpiente que cada vez que come, a
         update()
         ontimer(move, 100)
         
+## Nancy
+
+6. Modiqué la parte del movimiento (la función y solamente la sección de alimentos).
+
+   snake.append(head)
+
+        if head == food:
+                print('Snake:', len(snake))
+                food.x = randrange(-15, 15) * 10
+                food.y = randrange(-15, 15) * 10
+        else:
+                snake.pop(0)
+
+        clear()
+
+        for body in snake:
+                square(body.x, body.y, 9, 'black')
+
+        square(food.x, food.y, 9, 'green')
+        update()
+        ontimer(move, 100)
+
+        def movesquare():
+                food.x = randrange(-15, 15) * 10
+                food.y = randrange(-15, 15) * 10
+                ontimer(movesquare, 4500)
+
