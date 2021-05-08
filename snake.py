@@ -57,12 +57,14 @@ def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
 
-#Funcion principal de movimiento
+#Funcion principal de movimiento, aumenta los valores de x y.
 
 def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
     head.move(aim)
+
+#Los condicionales determinan si el jugador perdió.
 
     if not inside(head) or head in snake:
         square(head.x, head.y, 9, 'red')
